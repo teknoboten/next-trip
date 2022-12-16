@@ -1,16 +1,8 @@
 import { supabase } from '../utils/supabase'
 import Link from 'next/link'
 import Layout from '../components/layout'
-// export async function getStaticProps(context){
-//   // const quote = await getQuote()
-//   // return {
-//   //   props: { quote }
-//   //   }
-
-// }
 
 export default function Home({ trips }) {
-  console.log({ trips })
   return (
     <Layout>
       {trips.map((trip) => (
