@@ -3,6 +3,11 @@ import Link from 'next/link'
 import Layout from '../components/layout'
 
 export default function Home({ trips }) {
+  supabase.auth.onAuthStateChange((event, session) => {
+    // if (event == 'SIGNED_IN') console.log('SIGNED_IN', session)
+    console.log(event)
+  })
+
   return (
     <Layout>
       {trips.map((trip) => (
